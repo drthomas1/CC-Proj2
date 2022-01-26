@@ -3,11 +3,12 @@
     <head>
         <title>Dion Thomas Portfolio</title>
         <link href="./style.css" rel="stylesheet" type="text/css">
+
     </head>
 
     <body>
         <nav>
-        <h1>Dion Thomas Portfolio</h1>
+        <h1 onclick="newStyle()" id="thetitle">Dion Thomas Portfolio</h1>
         <ul class="nav-items">
             <li class="nav-item"><a href="#about-me">About Me</a></li>
             <li class="nav-item"><a href="#projects">Projects</a></li>
@@ -29,19 +30,27 @@
         </ul>
 
         <h2>Skills</h2>
-        <div id="skills">
-            <ul>
-                <li class="skills-inline">HTML</li>
-                <li class="skills-inline">CSS</li>
-                <li class="skills-inline">Javascript</li>
-                <li class="skills-inline">Git</li>
-            </ul>
+            <div id="skills">
+                <ul>
+                    <li class="skills-inline">HTML</li>
+                    <li class="skills-inline">CSS</li>
+                    <li class="skills-inline">Javascript</li>
+                    <li class="skills-inline">Git</li>
+                </ul>
+            </div>
         </div>
-    </div>
+
+        <br>
+        <p onclick="arrGen()" id="the-quote">CLICK ME FOR A QUOTE ABOUT PROGRAMMING!</p>
+            
+        
+
+
 
 
         <footer></footer>
 
-        </div>
+        <script src="./script.js"></script>
     </body>
+    
 </html>

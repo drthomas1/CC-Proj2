@@ -39,3 +39,8 @@ p {
   margin: 20px;
   font-weight: bold;
 }
+
+#thetitle {
+  font-size: 3em;
+  color: #459287;
+}
