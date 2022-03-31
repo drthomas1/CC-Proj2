@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Some Mini Projects</title>
+        <link href="./style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+        <nav>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item">Mini Projects</li>
+            </ul>
+        </nav>
+
+        <br>
+        
+
+        <!--
+        <h2>Reverse the string</h2>
+        <input type="text" name="" id="reverseTheName" onkeyup="reverseString()">
+        <input type="text" name="" id="showData">
+        <br>
+        <br>
+        -->    
+
+
+        <section> 
+            <h2>Reverse A Word</h5>
+            <label for="input-word">Enter A Word:</label>
+            <input id="input-word" type="text" name="input-word" required>
+            <input id="reverse-button" type="submit" value="Reverse Me" onclick="reverseString()">
+            <h5 id="result"></h5>
+        </section>
+
+        <br>
+    
+        <!--
+        number 1: <input type="text" id="num1">
+        number 2: <input type="text" id="num2">
+        <input type="submit" onclick="myFunction()">
+        
+        <p id="output"></p>  
+        -->
+
+        <section> 
+            <h2>Palindrome Checker</h5>
+            <label for="input-pal">Enter A Word:</label>
+            <input id="input-pal" type="text" name="input-pal" required>
+            <input id="pal-button" type="submit" value="Am I a palindrome?" onclick="palindrome()">
+            <h5 id="result-pal"></h5>
+        </section>
+
+        <br>
+
+        <div class="container" >
+            <h2>Counter</h2>
+            <span id="value">0</span>
+            
+            <div class="button-container">
+                <button class="btn decrease">Decrease</button>
+                <button class="btn reset">Reset</button>
+                <button class="btn increase">Increase</button>
+            </div>
+
+        </div>
+
+        <br>
+<!--
+            <p>Choose One</p>
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" class="icons-big" id="rock" onclick="redBorder()">
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png" class="icons-big" id="paper" onclick="redBorder()">
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png" class="icons-big" id="scissors" onclick="redBorder()">
+           
+        </section>
+        ababa
+
+    -->
+
+        <section>
+            <h2>Animal Sounds</h5>
+            <!--
+            <audio controls> 
+                <source src="https://www.freesoundslibrary.com/wp-content/uploads/2022/03/puppy-barking.mp3" type="audio/mp3" />
+            </audio>
+
+             <button onmouseup="sound1.play()">button1</button>  -->
+        <div>
+            <p>Hold the left mouse button down on the image to hear the animal's sound. Release the left mouse button to stop.</p>
+            <img src="https://cdn.pixabay.com/photo/2018/02/11/18/28/cat-3146398__180.jpg" class="animal-pics" onmousedown="sound1.play()" onmouseup="stopSound1()" />
+            <img src="https://tudosobrecachorros.com.br/wp-content/uploads/bernese-mountain-dog-400x381.jpg" class="animal-pics" onmousedown="sound2.play()" onmouseup="stopSound2()" />
+            <img src="http://www.mrsoshouse.com/bb/male.jpg" class="animal-pics" onmousedown="sound3.play()" onmouseup="stopSound3()" />
+        </div>
+
+        </section>
+
+
+        
+        
+        
+        
+        
+        <footer></footer>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
