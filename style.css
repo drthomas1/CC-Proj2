@@ -55,3 +55,31 @@ ul{
   font-size: 3em;
   color: #459287;
 }
+
+.container {
+  border: 1px solid black;
+  padding-bottom: 30px;
+}
+
+#value {
+  font-size: 100px;
+}
+
+.blank-square {
+  height: 150px;
+  width: 150px;
+}
+
+.icons-big {
+  height: 100px;
+  width: 100px;  
+}
+
+.animal-pics {
+  height: 180px;
+  width: 180px;
+}
+
+.animal-pics:active {
+  opacity: 0.5;
+ }
