@@ -1,0 +1,61 @@
+body {
+    text-align: center;
+    background: #8db3df;
+    font-family: sans-serif;
+  }
+
+  .nav-item {
+    display: inline;
+    padding: 10px;
+    width: 20px;
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  ul{ 
+    list-style-type: none;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  
+  h1 {
+      color: rgb(14, 7, 85); 
+  }
+  
+/*
+  #paper {
+    border: 1px solid red;
+  }
+  */
+
+  .container {
+    border: 1px solid black;
+    padding-bottom: 30px;
+  }
+
+  #value {
+    font-size: 100px;
+  }
+
+  .blank-square {
+    height: 150px;
+    width: 150px;
+  }
+
+  .icons-big {
+    height: 100px;
+    width: 100px;  
+  }
+
+  .animal-pics {
+    height: 180px;
+    width: 180px;
+  }
+
+  .animal-pics:active {
+    opacity: 0.5;
+   }
