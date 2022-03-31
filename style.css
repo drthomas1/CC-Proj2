@@ -17,6 +17,17 @@ p {
   margin: 0 auto;
 }
 
+#profile-image {
+  margin-right: 60px;
+}
+
+ul{ 
+  list-style-type: none;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
 .nav-item {
     display: inline;
     padding: 10px;
