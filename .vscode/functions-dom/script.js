@@ -52,7 +52,7 @@ function palindrome() {
     
   }
 
-// end palindrome
+// end palindrome ababa
 
 let count = 0;
 const value = document.querySelector('#value')
