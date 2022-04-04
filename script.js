@@ -219,6 +219,7 @@ let goblinPath = 'https://freesvg.org/img/goblin-chibi-1.png';
 let fairyPath = 'https://freesvg.org/img/pink-fairy.png';
 let gnomePath = 'https://freesvg.org/img/1494705645.png';
 let ladyBugPath = 'https://freesvg.org/img/ladybug_white_eyes.png';
+let names = ['Goblin', 'Fairy', 'Gnome', 'Ladybug'];
 let numLeaves = 3;
 let leaf1; 
 let leaf2;
@@ -245,6 +246,7 @@ const isClicked = (leaf) => {
 
 const playLeaf = (leaf) => {
   numLeaves--;
+  //nameIt();
   if(numLeaves === 0 && leaf3 != goblinPath){
     gameOver('win');
   }else if (isGoblin(leaf)){
@@ -261,7 +263,7 @@ const randomLeafGenerator = () => {
   }else if(goblinDoor === 1){
     leaf2 = goblinPath;
     leaf3 = ladyBugPath;
-    leaf1 = fairyPath; 
+    leaf1 = fairyPath;
   }else if(goblinDoor === 2){
     leaf3 = goblinPath;
     leaf2 = ladyBugPath;
@@ -273,25 +275,45 @@ const randomLeafGenerator = () => {
   }
 }
 
+function nameIt(leaf){
+    if(leaf === goblinPath){
+      document.getElementById('name-of').innerHTML = names[0]
+      document.getElementById('name-of').style.color = 'red';
+    }
+    if(leaf === fairyPath){
+      document.getElementById('name-of').innerHTML = names[1]
+    }
+    if(leaf === gnomePath){
+      document.getElementById('name-of').innerHTML = names[2]
+    }
+    if(leaf === ladyBugPath){
+      document.getElementById('name-of').innerHTML = names[3]
+    }
+  
+}
+
 
 leafImage1.onclick = () => {
   if(currentlyPlaying && !isClicked(leafImage1)) {
   leafImage1.src = leaf1;
   playLeaf(leafImage1);
+  nameIt(leaf1)
+  }
 }
 
-
-}
 leafImage2.onclick = () => {
   if(currentlyPlaying && !isClicked(leafImage2)) {
   leafImage2.src = leaf2;
   playLeaf(leafImage2);
+  nameIt(leaf2);
+  }
 }
-}
+
 leafImage3.onclick = () => {
   if(currentlyPlaying && !isClicked(leafImage3)) {
   leafImage3.src = leaf3;
   playLeaf(leafImage3);
+  nameIt(leaf3);
 }
 }
 
@@ -303,6 +325,8 @@ startButton.onclick = () => {
 
 const startRound = () => {
   numLeaves = 3;
+  document.getElementById('name-of').innerHTML = '';
+  document.getElementById('name-of').style.color = 'black';
   leafImage1.src = leafPath;
   leafImage2.src = leafPath;
   leafImage3.src = leafPath;
