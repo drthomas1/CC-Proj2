@@ -255,7 +255,7 @@ const playLeaf = (leaf) => {
     gameOver('lose');
   }
 } 
-
+/*
 const randomLeafGenerator = () => {
   let rando = Math.floor(Math.random() * 4);
   if (rando === 0){
@@ -276,6 +276,136 @@ const randomLeafGenerator = () => {
     leaf3 = fairyPath;
   } 
 }
+*/
+const randomLeafGenerator = () => {
+  let rando = Math.floor(Math.random() * 24);
+  switch(rando){
+    case 0:
+      leaf1 = goblinPath
+      leaf2 = fairyPath
+      leaf3 = gnomePath
+      break;
+    case 1:
+      leaf1 = goblinPath
+      leaf2 = fairyPath
+      leaf3 = ladyBugPath
+      break;
+    case 2:
+      leaf1 = goblinPath
+      leaf2 = gnomePath
+      leaf3 = fairyPath
+      break;
+    case 3:
+      leaf1 = goblinPath
+      leaf2 = gnomePath
+      leaf3 = ladyBugPath
+      break;
+    case 4:
+      leaf1 = goblinPath
+      leaf2 = ladyBugPath
+      leaf3 = fairyPath
+      break;
+    case 5:
+      leaf1 = goblinPath
+      leaf2 = ladyBugPath
+      leaf3 = gnomePath
+      break;
+    case 6:
+      leaf1 = fairyPath
+      leaf2 = goblinPath
+      leaf3 = gnomePath
+      break;
+    case 7:
+      leaf1 = fairyPath
+      leaf2 = goblinPath
+      leaf3 = ladyBugPath
+      break;
+    case 8:
+      leaf1 = fairyPath
+      leaf2 = gnomePath
+      leaf3 = goblinPath
+      break;
+    case 9:
+      leaf1 = fairyPath
+      leaf2 = gnomePath
+      leaf3 = ladyBugPath
+      break;
+    case 10:
+      leaf1 = fairyPath
+      leaf2 = ladyBugPath
+      leaf3 = goblinPath
+      break;
+    case 11:
+      leaf1 = fairyPath
+      leaf2 = ladyBugPath
+      leaf3 =  gnomePath
+      break;
+      case 12:
+        leaf1 = gnomePath
+        leaf2 = goblinPath
+        leaf3 = fairyPath
+        break;
+      case 13:
+        leaf1 = gnomePath
+        leaf2 = goblinPath
+        leaf3 = ladyBugPath
+        break;
+      case 14:
+        leaf1 = gnomePath
+        leaf2 = fairyPath
+        leaf3 = goblinPath
+        break;
+      case 15:
+        leaf1 = gnomePath
+        leaf2 = fairyPath
+        leaf3 = ladyBugPath
+        break;
+      case 16:
+        leaf1 = gnomePath
+        leaf2 = ladyBugPath
+        leaf3 = goblinPath
+        break;
+      case 17:
+        leaf1 = gnomePath
+        leaf2 = ladyBugPath
+        leaf3 = fairyPath
+        break;
+      case 18:
+        leaf1 = ladyBugPath
+        leaf2 = goblinPath
+        leaf3 = fairyPath
+        break;
+      case 19:
+        leaf1 = ladyBugPath
+        leaf2 = goblinPath
+        leaf3 = gnomePath
+        break;
+      case 20:
+        leaf1 = ladyBugPath
+        leaf2 = fairyPath
+        leaf3 = goblinPath
+        break;
+      case 21:
+        leaf1 = ladyBugPath
+        leaf2 = fairyPath
+        leaf3 = gnomePath
+        break;
+      case 22:
+        leaf1 = ladyBugPath
+        leaf2 = gnomePath
+        leaf3 = goblinPath
+        break;
+      case 23:
+        leaf1 = ladyBugPath
+        leaf2 = gnomePath
+        leaf3 = fairyPath
+        break;
+      default:
+          console.log('Invalid item');
+          break;
+  }
+}
+
 
 function nameIt(leaf){
     if(leaf === goblinPath){
