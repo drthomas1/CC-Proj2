@@ -8,6 +8,8 @@ let quote5 = document.getElementById('quote5');
 let quoteArr = [quote1, quote2, quote3, quote4, quote5];
 */
 
+
+
 function newStyle() {
   let newColor = '';
   let newFont = ''; 
@@ -252,27 +254,27 @@ const playLeaf = (leaf) => {
   }else if (isGoblin(leaf)){
     gameOver('lose');
   }
-}
+} 
 
 const randomLeafGenerator = () => {
-  let goblinDoor = Math.floor(Math.random() * numLeaves + 1);
-  if (goblinDoor === 0){
+  let rando = Math.floor(Math.random() * 4);
+  if (rando === 0){
     leaf1 = goblinPath;
     leaf2 = fairyPath; 
     leaf3 = gnomePath;  
-  }else if(goblinDoor === 1){
+  }else if(rando === 1){
     leaf2 = goblinPath;
     leaf3 = ladyBugPath;
     leaf1 = fairyPath;
-  }else if(goblinDoor === 2){
+  }else if(rando === 2){
     leaf3 = goblinPath;
     leaf2 = ladyBugPath;
     leaf1 = gnomePath;
-  }else{
+  } else if(rando === 3){
     leaf1 = ladyBugPath;
     leaf2 = gnomePath;
     leaf3 = fairyPath;
-  }
+  } 
 }
 
 function nameIt(leaf){
