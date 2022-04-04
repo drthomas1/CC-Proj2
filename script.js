@@ -212,6 +212,117 @@ function stopSound3() {
 // end of audio section
 
 
+let leafImage1 = document.getElementById('leaf1');
+let leafImage2 = document.getElementById('leaf2');
+let leafImage3 = document.getElementById('leaf3');
+let goblinPath = 'https://freesvg.org/img/goblin-chibi-1.png';
+let fairyPath = 'https://freesvg.org/img/pink-fairy.png';
+let gnomePath = 'https://freesvg.org/img/1494705645.png';
+let ladyBugPath = 'https://freesvg.org/img/ladybug_white_eyes.png';
+let numLeaves = 3;
+let leaf1; 
+let leaf2;
+let leaf3;
+let leafPath = 'https://freesvg.org/img/leaf_01.png';
+const startButton = document.getElementById('start');
+let currentlyPlaying = true;
+
+const isGoblin = (leaf) => {
+  if(leaf.src === goblinPath){
+    return true
+  }else{
+    return false
+  }
+}
+
+const isClicked = (leaf) => {
+  if(leaf.src === leafPath){
+    return false
+  }else{ 
+    return true
+    }
+}
+
+const playLeaf = (leaf) => {
+  numLeaves--;
+  if(numLeaves === 0 && leaf3 != goblinPath){
+    gameOver('win');
+  }else if (isGoblin(leaf)){
+    gameOver('lose');
+  }
+}
+
+const randomLeafGenerator = () => {
+  let goblinDoor = Math.floor(Math.random() * numLeaves + 1);
+  if (goblinDoor === 0){
+    leaf1 = goblinPath;
+    leaf2 = fairyPath; 
+    leaf3 = gnomePath;  
+  }else if(goblinDoor === 1){
+    leaf2 = goblinPath;
+    leaf3 = ladyBugPath;
+    leaf1 = fairyPath; 
+  }else if(goblinDoor === 2){
+    leaf3 = goblinPath;
+    leaf2 = ladyBugPath;
+    leaf1 = gnomePath;
+  }else{
+    leaf1 = ladyBugPath;
+    leaf2 = gnomePath;
+    leaf3 = fairyPath;
+  }
+}
+
+
+leafImage1.onclick = () => {
+  if(currentlyPlaying && !isClicked(leafImage1)) {
+  leafImage1.src = leaf1;
+  playLeaf(leafImage1);
+}
+
+
+}
+leafImage2.onclick = () => {
+  if(currentlyPlaying && !isClicked(leafImage2)) {
+  leafImage2.src = leaf2;
+  playLeaf(leafImage2);
+}
+}
+leafImage3.onclick = () => {
+  if(currentlyPlaying && !isClicked(leafImage3)) {
+  leafImage3.src = leaf3;
+  playLeaf(leafImage3);
+}
+}
+
+startButton.onclick = () => {
+  if(!currentlyPlaying) {
+  startRound();
+  }
+}
+
+const startRound = () => {
+  numLeaves = 3;
+  leafImage1.src = leafPath;
+  leafImage2.src = leafPath;
+  leafImage3.src = leafPath;
+  startButton.innerHTML = 'Good Luck!';
+  currentlyPlaying = true;
+  randomLeafGenerator();
+}
+
+const gameOver = (status) => {
+  if(status === 'win'){
+    startButton.innerHTML = 'You win! Play again?';
+  }else{
+  startButton.innerHTML = 'Game over! Play again?';
+}
+  currentlyPlaying = false;
+}
+
+startRound();
+
+
 
 
 
