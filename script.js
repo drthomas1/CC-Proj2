@@ -1,14 +1,3 @@
-/*
-let quote1 = document.getElementById('quote1');
-let quote2 = document.getElementById('quote2');
-let quote3 = document.getElementById('quote3');
-let quote4 = document.getElementById('quote4');
-let quote5 = document.getElementById('quote5');
-
-let quoteArr = [quote1, quote2, quote3, quote4, quote5];
-*/
-
-
 
 function newStyle() {
   let newColor = '';
@@ -83,18 +72,6 @@ function myFunction(){
 }
 */
 
-/*
-function reverseString(){
-    let str = document.getElementById("reverseTheName").value;
-    let newString = "";
-    
-    for(let i=str.length-1; i>=0; i--){
-        newString += str[i];
-    }
-    document.getElementById("showData").value = newString;
-}
-*/
-
 function reverseString(){
   let inputWord = document.getElementById("input-word").value;
   
@@ -152,38 +129,77 @@ btns.forEach(function(btn) {
 
 //end counter
 
+let qmImagePlayer = document.getElementById('question-mark-player');
+let qmImageComp =  document.getElementById('question-mark-comp');
+let rock = document.getElementById('rock');
+let paper = document.getElementById('paper');
+let scissors = document.getElementById('scissors');
+let rockPath = 'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png';
+let paperPath = 'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png';
+let scissorsPath = 'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png';
+let qmPath = 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg';
+let playerHand;
+let compHand;
+let result = document.getElementById('rps-result');
+let result2 = document.getElementById('rps-result2');
 
-/*
-function rockPaperScissors(hand){
-    let answer = '';
+
+function rockPaperScissors(){
     let compMove = Math.random();
     if(compMove <= 0.33){
-        compMove = 'rock';
+      qmImageComp.src = rockPath;
     }else if (compMove <= 0.67){
-        compMove = 'scissors';
-    }else{ compMove = 'paper'}
+      qmImageComp.src = scissorsPath;
+    }else{ 
+      qmImageComp.src = paperPath; }
 
-    if(hand === compMove){
-        answer = 'draw';
-    }else if (hand === 'rock' && compMove === 'paper'){
-        answer = 'paper. you lose';
-    }else if (hand === 'rock' && compMove === 'scissors'){
-      answer = 'scissors. you win';
-  }else if (hand === 'paper' && compMove === 'rock'){
-      answer = 'rock. you win';
-  }else if (hand === 'paper' && compMove === 'scissors'){
-      answer = 'scissors. you lose';
-  }else if (hand === 'scissors' && compMove === 'rock'){
-      answer = 'rock. you lose';
-  }else if (hand === 'scissors' && compMove === 'paper'){
-      answer = 'paper. you win';
+    if(qmImagePlayer.src === qmImageComp.src){
+      result.innerHTML = "It's a DRAW.";
+      result.style.color = 'black';
+      result2.innerHTML = '';
+    }else if (qmImagePlayer.src === rockPath && qmImageComp.src === paperPath){
+      result.innerHTML = 'Computer plays paper.';
+      result2.innerHTML = 'You LOSE'
+      result2.style.color = 'red';
+    }else if (qmImagePlayer.src === rockPath && qmImageComp.src === scissorsPath){
+      result.innerHTML = 'Computer plays scissors.';
+      result2.innerHTML = 'You WIN'
+      result2.style.color = 'blue';
+  }else if (qmImagePlayer.src === paperPath && qmImageComp.src === rockPath){
+      result.innerHTML = 'Computer plays rock.';
+      result2.innerHTML = 'You WIN'
+      result2.style.color = 'blue';
+  }else if (qmImagePlayer.src === paperPath && qmImageComp.src === scissorsPath){
+      result.innerHTML = 'Computer plays scissors.';
+      result2.innerHTML = 'You LOSE'
+      result2.style.color = 'red';
+  }else if (qmImagePlayer.src === scissorsPath && qmImageComp.src === rockPath){
+      result.innerHTML = 'Computer plays rock.';
+      result2.innerHTML = 'You LOSE'
+      result2.style.color = 'red';
+  }else if (qmImagePlayer.src === scissorsPath && qmImageComp.src === paperPath){
+      result.innerHTML = 'Computer plays paper.';
+      result2.innerHTML = 'You WIN'
+      result2.style.color = 'blue';
   }
-      return answer;
   }
 
+  rock.onclick = () => {
+    qmImagePlayer.src = rockPath;  
+    rockPaperScissors();
+  }
+  
+  paper.onclick = () => {
+    qmImagePlayer.src = paperPath;  
+    rockPaperScissors();
+  }
+  
+  scissors.onclick = () => {
+    qmImagePlayer.src = scissorsPath;  
+    rockPaperScissors();
+  }
+//rockPaperScissors();
 
-rockPaperScissors();
-*/
 
   // end of rock paper scissors functions
 
@@ -248,35 +264,13 @@ const isClicked = (leaf) => {
 
 const playLeaf = (leaf) => {
   numLeaves--;
-  //nameIt();
   if(numLeaves === 0 && leaf3 != goblinPath){
     gameOver('win');
   }else if (isGoblin(leaf)){
     gameOver('lose');
   }
 } 
-/*
-const randomLeafGenerator = () => {
-  let rando = Math.floor(Math.random() * 4);
-  if (rando === 0){
-    leaf1 = goblinPath;
-    leaf2 = fairyPath; 
-    leaf3 = gnomePath;  
-  }else if(rando === 1){
-    leaf2 = goblinPath;
-    leaf3 = ladyBugPath;
-    leaf1 = fairyPath;
-  }else if(rando === 2){
-    leaf3 = goblinPath;
-    leaf2 = ladyBugPath;
-    leaf1 = gnomePath;
-  } else if(rando === 3){
-    leaf1 = ladyBugPath;
-    leaf2 = gnomePath;
-    leaf3 = fairyPath;
-  } 
-}
-*/
+
 const randomLeafGenerator = () => {
   let rando = Math.floor(Math.random() * 24);
   switch(rando){
