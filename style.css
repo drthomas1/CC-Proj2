@@ -3,6 +3,23 @@ body {
   background: #8db3df;
   font-family: sans-serif;
 }
+/*
+.nav-items {
+  height: 50px;
+  background-color: black;
+}
+*/
+
+.nav-item {
+  display: inline;
+  color: white;
+  padding: 10px;
+  width: 20px;
+  margin: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
 
 h1 {
     color: rgb(14, 7, 85); 
@@ -28,16 +45,6 @@ ul{
   margin-right: 30px;
 }
 
-.nav-item {
-    display: inline;
-    padding: 10px;
-    width: 20px;
-    margin: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-  }
-
 .info {
     text-align: center;
 }
@@ -56,11 +63,6 @@ ul{
   color: #459287;
 }
 
-.container {
-  border: 1px solid black;
-  padding-bottom: 30px;
-}
-
 #value {
   font-size: 100px;
 }
@@ -70,9 +72,15 @@ ul{
   width: 150px;
 }
 
+/*
+.rps-label {
+  display: inline;
+}
+*/
+
 .icons-big {
   height: 100px;
-  width: 100px;  
+  width: 100px;
 }
 
 .animal-pics {
@@ -89,4 +97,21 @@ ul{
  #leaf1, #leaf2, #leaf3 {
   height: 150px;
   width: 150px;
+}
+
+.surround {
+  background-color: rgb(95, 118, 145);
+}
+
+.js-images {
+ width: 100px;
+ border: 2px solid white;
+ padding: 10px;
+ margin-bottom: 80px;
+ background-color: black;
+}
+
+.rps {
+  padding: 10px;
+  margin-bottom: 60px;
 }

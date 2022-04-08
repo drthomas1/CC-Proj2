@@ -13,80 +13,30 @@
                 <li class="nav-item">Mini Projects</li>
             </ul>
         </nav>
-
         <br>
-        
 
-        <!--
-        <h2>Reverse the string</h2>
-        <input type="text" name="" id="reverseTheName" onkeyup="reverseString()">
-        <input type="text" name="" id="showData">
-        <br>
-        <br>
-        -->    
-
-
-        <section> 
-            <h2>Reverse A Word</h5>
+        <div class="container">
+            <div class="container-a">
+            <h2>Reverse A Word</h2>
             <label for="input-word">Enter A Word:</label>
             <input id="input-word" type="text" name="input-word" required>
             <input id="reverse-button" type="submit" value="Reverse Me" onclick="reverseString()">
             <h5 id="result"></h5>
-        </section>
-
-        <br>
-    
-        <!--
-        number 1: <input type="text" id="num1">
-        number 2: <input type="text" id="num2">
-        <input type="submit" onclick="myFunction()">
+            </div>
         
-        <p id="output"></p>  
-        -->
 
-        <section> 
-            <h2>Palindrome Checker</h5>
+            <div class="container-a">
+            <h2>Palindrome Checker</h2>
             <label for="input-pal">Enter A Word:</label>
             <input id="input-pal" type="text" name="input-pal" required>
             <input id="pal-button" type="submit" value="Am I a palindrome?" onclick="palindrome()">
             <h5 id="result-pal"></h5>
-        </section>
-
-        <br>
-
-        <div class="container" >
-            <h2>Counter</h2>
-            <span id="value">0</span>
-            
-            <div class="button-container">
-                <button class="btn decrease">Decrease</button>
-                <button class="btn reset">Reset</button>
-                <button class="btn increase">Increase</button>
             </div>
 
-        </div>
-
-        <br>
-    <div>
-            <h2>Rock Paper Scissors</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-player" >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-comp" >
             <br>
+    
+        <div class="surround">
             <br>
-            <p>Choose your hand from the options below</p>
-            <br>
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" class="icons-big" id="rock" onclick="redBorder()">
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png" class="icons-big" id="paper" onclick="redBorder()">
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png" class="icons-big" id="scissors" onclick="redBorder()">
-            <h3 id="rps-result"></h3>
-            <h3 id="rps-result2"></h3>
-           
-    </div>
-
-        <br>
-        <br>
-
-        <section>
             <h2>Animal Sounds</h5>
             <!--
             <audio controls> 
@@ -99,29 +49,80 @@
             <img src="https://cdn.pixabay.com/photo/2018/02/11/18/28/cat-3146398__180.jpg" class="animal-pics" onmousedown="sound1.play()" onmouseup="stopSound1()" />
             <img src="https://tudosobrecachorros.com.br/wp-content/uploads/bernese-mountain-dog-400x381.jpg" class="animal-pics" onmousedown="sound2.play()" onmouseup="stopSound2()" />
             <img src="http://www.mrsoshouse.com/bb/male.jpg" class="animal-pics" onmousedown="sound3.play()" onmouseup="stopSound3()" />
+            
         </div>
+        <br>
+        </div>
+        <br>
 
-        </section>
 
-        <div>
+        <div class="container2">
+        <div class="container-b">
+            <h2>Counter</h2>
+            <span id="value">0</span>
+            
+            <div class="button-container">
+                <button class="btn decrease">Decrease</button>
+                <button class="btn reset">Reset</button>
+                <button class="btn increase">Increase</button>
+            </div>
+        </div>
+        <br>
+
+    <div class="surround">
+        <br>
+            <h2>Rock Paper Scissors</h2>
+            <div class="rps">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-player" >
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-comp" >
+            <br>
+            <br>
+            <p>Choose your hand from the options below</p>
+            <br>
+      <!--      <p class="rps-label">Rock</p>
+            <p class="rps-label">Paper</p>
+            <p class="rps-label">Scissors</p> -->
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" class="icons-big" id="rock" onclick="redBorder()">
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png" class="icons-big" id="paper" onclick="redBorder()">
+            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png" class="icons-big" id="scissors" onclick="redBorder()">
+            <h3 id="rps-result"></h3>
+            <h3 id="rps-result2"></h3>
+            </div>
+           
+    </div>
+        
+
+        <div class="container-b">
             <h2>Avoid The Goblin</h2>
             <h3 id="name-of"></h3>
             <img id="leaf1" src="https://freesvg.org/img/leaf_01.png">
             <img id="leaf2" src="https://freesvg.org/img/leaf_01.png">
             <img id="leaf3" src="https://freesvg.org/img/leaf_01.png">
           </div>
-      
           <button id="start">Good luck!</button>
-
           <br>
           <br>
 
+        </div>
+        <div class="surround">
+            <br>
+            <h2>Sample Javascript Algorithms</h2>
+            <p>Click to open</p>
+            <br>
+        <div class="js-codes">
+            <a href="https://ibb.co/S36rXR1"><img src="https://i.ibb.co/S36rXR1/seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration.png" class="js-images" alt="seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration" border="0" /></a>
+            <a href="https://ibb.co/r5Y2jjY"><img src="https://i.ibb.co/r5Y2jjY/sortedunion.png" class="js-images" alt="sortedunion" border="0" /></a>
+            <a href="https://ibb.co/MsQ6S8W"><img src="https://i.ibb.co/MsQ6S8W/return-largest-numbers-in-arrays.png" class="js-images" alt="return-largest-numbers-in-arrays" border="0" /></a>
+            <a href="https://ibb.co/cwfFQvj"><img src="https://i.ibb.co/cwfFQvj/search-and-replace-completed.png" class="js-images" alt="search-and-replace-completed" border="0" /></a>
+            <a href="https://ibb.co/qpzZtV4"><img src="https://i.ibb.co/qpzZtV4/DNA-Pairing-completed.png" class="js-images" alt="DNA-Pairing-completed" border="0" /></a>
+            <a href="https://ibb.co/z7F6T05"><img src="https://i.ibb.co/z7F6T05/diffarrays-better-solution.png" class="js-images" alt="diffarrays-better-solution" border="0" /></a>
+            <a href="https://ibb.co/BfRBXCr"><img src="https://i.ibb.co/BfRBXCr/convert-html-strings.png" class="js-images" alt="convert-html-strings" border="0" /></a>
+            <br>
+        </div>
+        </div>
 
-        
-        
-        
-        
-        
+
+
         <footer></footer>
 
         <script src="./script.js"></script>
