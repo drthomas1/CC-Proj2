@@ -1,61 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dion Thomas Portfolio</title>
-        <link href="./style.css" rel="stylesheet" type="text/css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dion Thomas Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+   
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Dion Thomas</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="index2.html">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-    </head>
-
-    <body>
-        <nav>
-        <h1 onclick="newStyle()" id="thetitle">Dion Thomas Portfolio (In Progress)</h1>
-        
-        <ul class="nav-items">
-            <li class="nav-item"><a href="#about-me">About Me</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#skills">Skills</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>        
-
-        <div class="info">
-            <img src="https://freesvg.org/img/1519501415.png" id="profile-image" alt="man in a suit using computer">
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>    
-         </div>
-        
-       <div>
-        <h2>Projects</h2>
-        <ul>
-            <li>Codecademy Projects</li>
-            <li>Free Code Camp Projects</li>
-            <li>Personal portfolio Site</li>
-            <li><a href="index2.html">Personal Mini Projects</a></li>
-        </ul>
-
-        <h2>Skills</h2>
-            <div id="skills">
-                <ul>
-                    <li class="skills-inline">HTML</li>
-                    <li class="skills-inline">CSS</li>
-                    <li class="skills-inline">Javascript</li>
-                    <li class="skills-inline">Git</li>
-                </ul>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+              in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <img
+            src="https://img.freepik.com/free-photo/gardening_23-2148020376.jpg?w=1380&t=st=1649635043~exp=1649635643~hmac=dd2969fed0477a370ba9cad6f2db73518025b1df30a41d7c0604b52f5feb6b71"
+            alt="A photo of Mel Gibson"
+            class="portrait"
+          />
         </div>
+      </section>
 
+      
+
+      <section id="skills"> 
+        <h2 id="skills-h2">Skills</h2>
         <br>
-        <p onclick="arrGen()" id="the-quote">CLICK ME FOR A QUOTE ABOUT PROGRAMMING!</p>
+        <div id="skills-container">
+          <i class="fa fa-html5"></i>
+          <i class="fa fa-css3"></i>
+          <i class="fa-brands fa-js-square"></i>
+          <i class="fa-brands fa-react"></i>
+          <i class="fa fa-git"></i>
+          <i class="fa fa-chrome"></i>
+          <i class="fa-brands fa-npm"></i>
+          <i class="fa-brands fa-node-js"></i>
+          <i class="fa fa-github"></i>
+          <span class="iconify" data-icon="file-icons:adobe-photoshop"></span>
+          
+        </div>
+      </section>
 
-        <br>
-            
-        
+    </main>
 
+    <footer></footer>
 
-
-
-        <footer></footer>
-
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/437fc37fbb.js" crossorigin="anonymous"></script>
         <script src="./script.js"></script>
     </body>
     

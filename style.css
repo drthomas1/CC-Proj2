@@ -1,67 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap"); 
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
 body {
-  text-align: center;
-  background: #8db3df;
-  font-family: sans-serif;
-}
-/*
-.nav-items {
-  height: 50px;
-  background-color: black;
-}
-*/
-
-.nav-item {
-  display: inline;
-  color: white;
-  padding: 10px;
-  width: 20px;
-  margin: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 20px;
+  height: 100%;
+  color: var(--font-color);
+  background-color: #666666;
 }
 
-h1 {
-    color: rgb(14, 7, 85); 
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  --font-color: #fcf8f8;
 }
 
-h4 {
-    color: pink;
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin: 0;
+  margin-bottom: var(--spacing-2);
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  margin: 0;
+  padding: 0 var(--spacing-3);
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
-  width: 50%;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) 0;
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+}
+
+.navigation-item {
+  margin: var(--spacing-1);
+}
+
+.portrait {
+  width: 300px;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+
+.about-me-container {
+  display: flex;
+  margin-top: 20%;
+  max-width: 900px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#skills-h2 {
+  max-width: 900px;
+  margin-left: 10%;
+  margin-right: 10%;  
+}
+
+#skills-container {
+  max-width: 900px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+section {
+  padding: var(--spacing-3) 0;
+}
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#logo {
+  margin: 0;
+}
+
+#skills {
+  margin-top: 15%;
+}
+
+#skills-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#skills-container > * {
+  font-size: 2em;
+  width: 2em;
+  margin-top: var(--spacing-1);
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+}
+
+/* End of CSS for non Projects */
+
+#mini-projects {
   margin: 0 auto;
 }
 
-#profile-image {
-  margin-right: 60px;
+.container {
+  margin: 0 auto;
 }
 
-ul{ 
-  list-style-type: none;
+.container-inner {
+  background-color: rgb(75, 83, 105);
+  margin: 20px 20px 20px 20px;
   text-align: center;
-  font-weight: bold;
-  margin-right: 30px;
 }
 
-.info {
-    text-align: center;
+.corners {
+  border-radius: 25px;
+  border: 2px solid #f6f8fa;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
 }
 
-.skills-inline {
-  display: inline;
-  border: 1px solid red;
-  padding: 10px;
-  width: 20px;
-  margin: 20px;
-  font-weight: bold;
+#quote-gen.corners {
+  width: 400px;
+  height: 240px;
+} 
+
+#rev-word, #quote-gen, #palind {
+  display: inline-block;
+  vertical-align: top;
 }
 
-#thetitle {
-  font-size: 3em;
-  color: #459287;
+#animal-sounds.corners {
+  width: 600px;
+  height: 340px;
 }
+
+#counter.corners {
+  height: 250px;
+}
+
+#animal-sounds, #counter {
+  display: inline-block;
+  background-color: rgb(57, 83, 134);
+}
+
+#style-change.corners {
+  width: 800px;
+  height: 120px;
+}
+
+#style-change {
+  margin: 0 auto;
+  background-color: rgb(57, 83, 134);
+}
+
+#rps.corners {
+  width: 400px;
+  height: 480px;
+}
+
+#avoid-the-goblin.corners {
+  width: 500px;
+  height: 400px;
+}
+
+#rps, #avoid-the-goblin {
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgb(57, 134, 98);
+}
+
+#js-algs.container-inner {
+  border-radius: 5px;
+  border: 2px solid #f6f8fa;
+  padding: 20px;
+  width: 900px;
+  height: 300px;
+}
+
 
 #value {
   font-size: 100px;
@@ -71,12 +240,6 @@ ul{
   height: 150px;
   width: 150px;
 }
-
-/*
-.rps-label {
-  display: inline;
-}
-*/
 
 .icons-big {
   height: 100px;

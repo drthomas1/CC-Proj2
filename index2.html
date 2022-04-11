@@ -1,126 +1,141 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Some Mini Projects</title>
-        <link href="./style.css" rel="stylesheet" type="text/css">
-
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./all.min.css" /> 
+  </head>
 
     <body>
         <nav>
-            <ul class="nav-items">
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item">Mini Projects</li>
+            <h2 id="logo">Dion Thomas</h2>
+            <ul class="navigation-items">
+              <li class="navigation-item"><a href="index.html">About Me</a></li>
+              <li class="navigation-item"><a href="index2.html">Projects</a></li>
+              <li class="navigation-item"><a href="index.html">Skills</a></li>
+              <li class="navigation-item"><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-        <br>
+          </nav>
+
+        <div id="mini-projects">
+            <h1 id="mini-projects-title">Mini Projects</h1>
+        </div>
 
         <div class="container">
-            <div class="container-a">
-            <h2>Reverse A Word</h2>
-            <label for="input-word">Enter A Word:</label>
-            <input id="input-word" type="text" name="input-word" required>
-            <input id="reverse-button" type="submit" value="Reverse Me" onclick="reverseString()">
-            <h5 id="result"></h5>
+            <h2>String Functions:</h2>
+            <div class="container-inner corners" id="rev-word">
+              <h3>Reverse A Word</h3>
+               <label for="input-word">Enter A Word:</label>
+               <input id="input-word" type="text" name="input-word" required>
+              <input id="reverse-button" type="submit" value="Reverse Me" onclick="reverseString()">
+               <h5 id="result"></h5>
             </div>
         
-
-            <div class="container-a">
-            <h2>Palindrome Checker</h2>
-            <label for="input-pal">Enter A Word:</label>
-            <input id="input-pal" type="text" name="input-pal" required>
-            <input id="pal-button" type="submit" value="Am I a palindrome?" onclick="palindrome()">
-            <h5 id="result-pal"></h5>
+            <div class="container-inner corners" id="quote-gen">
+                <h3>Quote Generator</h3>
+                <p onclick="arrGen()" id="the-quote">CLICK ME FOR A QUOTE ABOUT PROGRAMMING!</p>
             </div>
 
-            <br>
+            <div class="container-inner corners" id="palind">
+                <h3>Palindrome Checker</h3>
+                <label for="input-pal">Enter A Word:</label>
+                <input id="input-pal" type="text" name="input-pal" required>
+                <input id="pal-button" type="submit" value="Am I a palindrome?" onclick="palindrome()">
+                <h5 id="result-pal"></h5>
+            </div>
+        </div>
+
+        <br>
     
-        <div class="surround">
-            <br>
-            <h2>Animal Sounds</h5>
+        <div class="container">
+            <h2>Miscellaneous:</h2>
+            <div class="container-inner corners" id="animal-sounds">
+                <h3>Animal Sounds</h3>
             <!--
             <audio controls> 
                 <source src="https://www.freesoundslibrary.com/wp-content/uploads/2022/03/puppy-barking.mp3" type="audio/mp3" />
             </audio>
 
              <button onmouseup="sound1.play()">button1</button>  -->
-        <div>
-            <p>Hold the left mouse button down on the image to hear the animal's sound. Release the left mouse button to stop.</p>
-            <img src="https://cdn.pixabay.com/photo/2018/02/11/18/28/cat-3146398__180.jpg" class="animal-pics" onmousedown="sound1.play()" onmouseup="stopSound1()" />
-            <img src="https://tudosobrecachorros.com.br/wp-content/uploads/bernese-mountain-dog-400x381.jpg" class="animal-pics" onmousedown="sound2.play()" onmouseup="stopSound2()" />
-            <img src="http://www.mrsoshouse.com/bb/male.jpg" class="animal-pics" onmousedown="sound3.play()" onmouseup="stopSound3()" />
-            
-        </div>
-        <br>
-        </div>
-        <br>
-
-
-        <div class="container2">
-        <div class="container-b">
-            <h2>Counter</h2>
-            <span id="value">0</span>
-            
-            <div class="button-container">
-                <button class="btn decrease">Decrease</button>
-                <button class="btn reset">Reset</button>
-                <button class="btn increase">Increase</button>
+                <p>Hold the left mouse button down on the image to hear the animal's sound. Release the left mouse button to stop.</p>
+                <img src="https://cdn.pixabay.com/photo/2018/02/11/18/28/cat-3146398__180.jpg" class="animal-pics" onmousedown="sound1.play()" onmouseup="stopSound1()" />
+                <img src="https://tudosobrecachorros.com.br/wp-content/uploads/bernese-mountain-dog-400x381.jpg" class="animal-pics" onmousedown="sound2.play()" onmouseup="stopSound2()" />
+                <img src="http://www.mrsoshouse.com/bb/male.jpg" class="animal-pics" onmousedown="sound3.play()" onmouseup="stopSound3()" />    
             </div>
+
+            <div class="container-inner corners" id="counter">
+                <h3>Counter</h3>
+                <span id="value">0</span>
+                
+                    <div class="button-container">
+                        <button class="btn decrease">Decrease</button>
+                        <button class="btn reset">Reset</button>
+                        <button class="btn increase">Increase</button>
+                    </div>
+                </div>
+
+            <div class="container-inner corners" id="style-change">
+                <h3>Style Changing Function</h3>
+                <h1 id="fc-changer" onclick="newStyle()">CLICK ME TO CHANGE MY FONT AND COLOR</h1>
+            </div>
+
         </div>
+        
         <br>
 
-    <div class="surround">
-        <br>
-            <h2>Rock Paper Scissors</h2>
-            <div class="rps">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-player" >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-comp" >
-            <br>
-            <br>
-            <p>Choose your hand from the options below</p>
-            <br>
-      <!--      <p class="rps-label">Rock</p>
-            <p class="rps-label">Paper</p>
-            <p class="rps-label">Scissors</p> -->
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" class="icons-big" id="rock" onclick="redBorder()">
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png" class="icons-big" id="paper" onclick="redBorder()">
-            <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png" class="icons-big" id="scissors" onclick="redBorder()">
-            <h3 id="rps-result"></h3>
-            <h3 id="rps-result2"></h3>
-            </div>
-           
-    </div>
+    <div class="container">
+        <h2>Games:</h2>
+            <div class="container-inner corners" id="rps">
+                <h3>Rock Paper Scissors</h3>
+                <div class="rps">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-player" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Question_mark_alternate.svg" class="icons-big" id="question-mark-comp" >
+                    <br>
+                    <br>
+                    <p>Choose your hand from the options below</p>
+                    <br>
+                    <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" class="icons-big" id="rock" onclick="redBorder()">
+                    <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296855_960_720.png" class="icons-big" id="paper" onclick="redBorder()">
+                    <img src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png" class="icons-big" id="scissors" onclick="redBorder()">
+                    <h3 id="rps-result"></h3>
+                    <h3 id="rps-result2"></h3>
+                </div>
+           </div>
         
 
-        <div class="container-b">
-            <h2>Avoid The Goblin</h2>
+        <div class="container-inner corners" id="avoid-the-goblin">
+            <h3>Avoid The Goblin</h3>
+            <p>Uncover all 3 leaves without uncovering a goblin.</p>
             <h3 id="name-of"></h3>
             <img id="leaf1" src="https://freesvg.org/img/leaf_01.png">
             <img id="leaf2" src="https://freesvg.org/img/leaf_01.png">
             <img id="leaf3" src="https://freesvg.org/img/leaf_01.png">
-          </div>
-          <button id="start">Good luck!</button>
-          <br>
-          <br>
-
-        </div>
-        <div class="surround">
             <br>
-            <h2>Sample Javascript Algorithms</h2>
+            <button id="start">Good luck!</button>
+            </div>
+    </div>
+
+    <br>
+    <div class="container">
+        <div class="container-inner" id="js-algs">
+            <br>
+            <h2>Sample Javascript Algorithm Scripting:</h2>
             <p>Click to open</p>
             <br>
         <div class="js-codes">
-            <a href="https://ibb.co/S36rXR1"><img src="https://i.ibb.co/S36rXR1/seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration.png" class="js-images" alt="seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration" border="0" /></a>
-            <a href="https://ibb.co/r5Y2jjY"><img src="https://i.ibb.co/r5Y2jjY/sortedunion.png" class="js-images" alt="sortedunion" border="0" /></a>
-            <a href="https://ibb.co/MsQ6S8W"><img src="https://i.ibb.co/MsQ6S8W/return-largest-numbers-in-arrays.png" class="js-images" alt="return-largest-numbers-in-arrays" border="0" /></a>
-            <a href="https://ibb.co/cwfFQvj"><img src="https://i.ibb.co/cwfFQvj/search-and-replace-completed.png" class="js-images" alt="search-and-replace-completed" border="0" /></a>
-            <a href="https://ibb.co/qpzZtV4"><img src="https://i.ibb.co/qpzZtV4/DNA-Pairing-completed.png" class="js-images" alt="DNA-Pairing-completed" border="0" /></a>
-            <a href="https://ibb.co/z7F6T05"><img src="https://i.ibb.co/z7F6T05/diffarrays-better-solution.png" class="js-images" alt="diffarrays-better-solution" border="0" /></a>
-            <a href="https://ibb.co/BfRBXCr"><img src="https://i.ibb.co/BfRBXCr/convert-html-strings.png" class="js-images" alt="convert-html-strings" border="0" /></a>
+            <a href="https://ibb.co/sqHqK2p"><img src="https://i.ibb.co/sqHqK2p/sortedunion.png" class="js-images" alt="sortedunion" border="0" /></a>
+            <a href="https://ibb.co/nfnfC1k"><img src="https://i.ibb.co/nfnfC1k/seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration.png" class="js-images" alt="seek-and-destroy-simple-FILTER-and-ARGUMENTS-demonstration" border="0" /></a>
+            <a href="https://ibb.co/W6kCMpv"><img src="https://i.ibb.co/W6kCMpv/search-and-replace-completed.png" class="js-images" alt="search-and-replace-completed" border="0" /></a>
+            <a href="https://ibb.co/DKkrygS"><img src="https://i.ibb.co/DKkrygS/return-largest-numbers-in-arrays.png" class="js-images" alt="return-largest-numbers-in-arrays" border="0" /></a>
+            <a href="https://ibb.co/xgGvY40"><img src="https://i.ibb.co/xgGvY40/DNA-Pairing-completed.png" class="js-images" alt="DNA-Pairing-completed" border="0" /></a>
+            <a href="https://ibb.co/QjZ01q4"><img src="https://i.ibb.co/QjZ01q4/diffarrays-better-solution.png" class="js-images" alt="diffarrays-better-solution" border="0" /></a>
+            <a href="https://ibb.co/jLJ3KnX"><img src="https://i.ibb.co/jLJ3KnX/convert-html-strings.png" class="js-images" alt="convert-html-strings" border="0" /></a>            
             <br>
         </div>
         </div>
-
+    </div>
 
 
         <footer></footer>

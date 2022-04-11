@@ -33,7 +33,7 @@ function newStyle() {
         newFont = 'Impact';
         break;
   }
-  var elem = document.getElementById('thetitle');
+  var elem = document.getElementById('fc-changer');
   elem.style.color = newColor;
   elem.style.fontFamily = newFont; 
 }
@@ -471,6 +471,8 @@ const gameOver = (status) => {
 }
 
 startRound();
+
+//end of Avoid The Goblin
 
 
 
