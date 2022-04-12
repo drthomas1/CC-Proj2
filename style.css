@@ -238,17 +238,17 @@ a {
 }
 
 #rps.corners {
-  width: 400px;
-  height: 480px;
+  width: 600px;
+  height: 600px;
 }
 
 #avoid-the-goblin.corners {
-  width: 500px;
+  width: 600px;
   height: 400px;
+  margin: 0 auto;
 }
 
 #rps, #avoid-the-goblin {
-  display: inline-block;
   vertical-align: top;
   background-color: rgb(57, 134, 98);
 }
@@ -269,6 +269,11 @@ a {
 .blank-square {
   height: 150px;
   width: 150px;
+}
+
+.icons-small {
+  height: 50px;
+  width: 50px;
 }
 
 .icons-big {
@@ -304,7 +309,57 @@ a {
  background-color: black;
 }
 
+/* Rock Paper Scissors */
 .rps {
   padding: 10px;
   margin-bottom: 60px;
+}
+
+.rps-cards {
+  display: inline-block;
+}
+
+#player-img {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#computer-img {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.rps-names {
+  display: inline;
+}
+
+#rps-player-name {
+  margin: 35px
+}
+
+#rps-comp-name {
+  margin: 20px;
+}
+
+.rps-item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+.rps-caption {
+  font-size: 15px;
+  display: block;
+ color: white;
+ background-color: black;
+ padding: 5px;
+  margin: 8px;
+}
+
+#question-mark-player, #question-mark-comp {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  background-color: gray;
 }
