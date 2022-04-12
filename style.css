@@ -83,7 +83,7 @@ nav {
 }
 
 #skills-container {
-  max-width: 900px;
+  max-width: 650px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -184,13 +184,22 @@ a {
   margin: 0 auto;
 }
 
+.section-titles {
+  text-align: center;
+}
+
 .container {
   margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.61);
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .container-inner {
   background-color: rgb(75, 83, 105);
-  margin: 20px 20px 20px 20px;
+  margin: 15px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -223,6 +232,7 @@ a {
 }
 
 #animal-sounds, #counter {
+  vertical-align: bottom;
   display: inline-block;
   background-color: rgb(57, 83, 134);
 }
@@ -239,17 +249,17 @@ a {
 
 #rps.corners {
   width: 600px;
-  height: 600px;
+  height: 620px;
 }
 
 #avoid-the-goblin.corners {
   width: 600px;
-  height: 400px;
+  height: 375px;
   margin: 0 auto;
 }
 
 #rps, #avoid-the-goblin {
-  vertical-align: top;
+ /* vertical-align: top; */
   background-color: rgb(57, 134, 98);
 }
 
@@ -261,24 +271,8 @@ a {
   height: 300px;
 }
 
-
 #value {
   font-size: 100px;
-}
-
-.blank-square {
-  height: 150px;
-  width: 150px;
-}
-
-.icons-small {
-  height: 50px;
-  width: 50px;
-}
-
-.icons-big {
-  height: 100px;
-  width: 100px;
 }
 
 .animal-pics {
@@ -296,6 +290,21 @@ a {
   height: 150px;
   width: 150px;
 }
+
+#name-of {
+  height: 25px;
+}
+
+#start {
+  margin-top: 20px;
+  font-size: 15px;
+  background-color: rgb(255, 187, 0);
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+/* */
 
 .surround {
   background-color: rgb(95, 118, 145);
@@ -320,14 +329,25 @@ a {
 }
 
 #player-img {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   margin-right: 10px;
 }
 
 #computer-img {
-  margin-bottom: 10px;
+  margin-bottom: 35px;
   margin-left: 10px;
 }
+
+.icons-small {
+  height: 50px;
+  width: 50px;
+}
+
+.icons-big {
+  height: 100px;
+  width: 100px;
+}
+
 
 .rps-names {
   display: inline;
@@ -344,22 +364,28 @@ a {
 .rps-item {
   vertical-align: top;
   display: inline-block;
-  text-align: center;
   width: 120px;
 }
 
 .rps-caption {
   font-size: 15px;
   display: block;
- color: white;
- background-color: black;
- padding: 5px;
-  margin: 8px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  width: 93px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
 }
 
 #question-mark-player, #question-mark-comp {
   border: 1px solid black;
   margin: 10px;
   padding: 5px;
-  background-color: gray;
+  background-color: grey;
+}
+
+#rps-result,#rps-result2 {
+  height: 25px;
 }

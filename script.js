@@ -149,50 +149,53 @@ let rpsCurrentlyPlaying = true;
 function rockPaperScissors(){
     let compMove = Math.random();
     if(compMove <= 0.33){
+      compMove = 'Rock'
       qmImageComp.src = rockPath;
     }else if (compMove <= 0.67){
+      compMove = 'Scissors'
       qmImageComp.src = scissorsPath;
     }else{ 
+      compMove = 'Paper'
       qmImageComp.src = paperPath; }
 
     if(qmImagePlayer.src === qmImageComp.src){
-      result.innerHTML = "It's a DRAW.";
-      result.style.color = 'black';
+      result.innerHTML = `Computer plays ${compMove}.`;
+      result2.innerHTML = 'DRAW';
       rpsStartButton.innerHTML = 'Play Again?';
-      result2.innerHTML = '';
+      result2.style.color = 'black';
       rpsCurrentlyPlaying = false;
     }else if (qmImagePlayer.src === rockPath && qmImageComp.src === paperPath){
-      result.innerHTML = 'Computer plays paper.';
+      result.innerHTML = 'Computer plays Paper.';
       result2.innerHTML = 'You LOSE';
       rpsStartButton.innerHTML = 'Play Again?'
       result2.style.color = 'red';
       rpsCurrentlyPlaying = false;
     }else if (qmImagePlayer.src === rockPath && qmImageComp.src === scissorsPath){
-      result.innerHTML = 'Computer plays scissors.';
+      result.innerHTML = 'Computer plays Scissors.';
       result2.innerHTML = 'You WIN';
       rpsStartButton.innerHTML = 'Play Again?';
       result2.style.color = 'blue';
       rpsCurrentlyPlaying = false;
   }else if (qmImagePlayer.src === paperPath && qmImageComp.src === rockPath){
-      result.innerHTML = 'Computer plays rock.';
+      result.innerHTML = 'Computer plays Rock.';
       result2.innerHTML = 'You WIN';
       rpsStartButton.innerHTML = 'Play Again?';
       result2.style.color = 'blue';
       rpsCurrentlyPlaying = false;
   }else if (qmImagePlayer.src === paperPath && qmImageComp.src === scissorsPath){
-      result.innerHTML = 'Computer plays scissors.';
+      result.innerHTML = 'Computer plays Scissors.';
       result2.innerHTML = 'You LOSE';
       rpsStartButton.innerHTML = 'Play Again?';
       result2.style.color = 'red';
       rpsCurrentlyPlaying = false;
   }else if (qmImagePlayer.src === scissorsPath && qmImageComp.src === rockPath){
-      result.innerHTML = 'Computer plays rock.';
+      result.innerHTML = 'Computer plays Rock.';
       result2.innerHTML = 'You LOSE';
       rpsStartButton.innerHTML = 'Play Again?';
       result2.style.color = 'red';
       rpsCurrentlyPlaying = false;
   }else if (qmImagePlayer.src === scissorsPath && qmImageComp.src === paperPath){
-      result.innerHTML = 'Computer plays paper.';
+      result.innerHTML = 'Computer plays Paper.';
       result2.innerHTML = 'You WIN';
       rpsStartButton.innerHTML = 'Play Again?';
       result2.style.color = 'blue';
@@ -240,30 +243,6 @@ rpsStartButton.onclick = () => {
     
   }
 }
-
-/* functions to improve game
-
-const playLeaf = (leaf) => {
-  numLeaves--;
-  if(numLeaves === 0 && leaf3 != goblinPath){
-    gameOver('win');
-  }else if (isGoblin(leaf)){
-    gameOver('lose');
-  }
-} 
-
-  const rpsGmeOver = (status) => {
-    if(status === 'win'){
-      startButton.innerHTML = 'You win! Play again?';
-    }else{
-    startButton.innerHTML = 'Game over! Play again?';
-  }
-    currentlyPlaying = false;
-  }
-
-  */
-//rockPaperScissors();
-
 
   // end of rock paper scissors functions
 
@@ -533,6 +512,8 @@ const gameOver = (status) => {
 }
   currentlyPlaying = false;
 }
+
+
 
 startRound();
 
