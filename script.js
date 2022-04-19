@@ -519,7 +519,231 @@ startRound();
 
 //end of Avoid The Goblin
 
+const wordArr = ['apple', 'orange', 'watermelon', 'pomegranate', 'banana', 'plum', 'apricot',
+'lemon', 'kiwifruit', 'strawberry', 'blackberry', 'peach', 'raspberry', 'grapefruit', 'pear',
+'lime', 'papaya', 'mango', 'nectarine', 'passionfruit', 'avocado', 'tomato', 'cherry', 'blackcurrant',
+'blueberry', 'clementine', 'cantaloupe', 'cranberry', 'durian', 'guava', 'grapes', 'kumquat',
+'lychee', 'pineapple', 'plantain', 'tangerine'];
+
+const q = document.getElementById('q');
+const w = document.getElementById('w');
+const e = document.getElementById('e');
+const r = document.getElementById('r');
+const t = document.getElementById('t');
+const y = document.getElementById('y');
+const u = document.getElementById('u');
+const i = document.getElementById('i');
+const o = document.getElementById('o');
+const p = document.getElementById('p');
+const a = document.getElementById('a');
+const s = document.getElementById('s');
+const d = document.getElementById('d');
+const f = document.getElementById('f');
+const g = document.getElementById('g');
+const h = document.getElementById('h');
+const j = document.getElementById('j');
+const k = document.getElementById('k');
+const l = document.getElementById('l');
+const z = document.getElementById('z');
+const x = document.getElementById('x');
+const c = document.getElementById('c');
+const v = document.getElementById('v');
+const b = document.getElementById('b');
+const n = document.getElementById('n');
+const m = document.getElementById('m');
+const playButton = document.getElementById('play');
+
+let livesMessage = document.getElementById('lives');
+let message = document.getElementById('message');
+
+let parent = document.getElementById('table');
+let random;
+let randomWord;
+
+let lives;
+let playing;
+let master = [];
+let pgArr = [];
 
 
+
+
+function turnIntoArr(str) {
+    for (let i = 0; i < str.length; i++){
+        master.push(str[i]);
+    }
+}
+
+function calcLives(letter){
+  if(master.indexOf(letter) < 0){
+    lives--
+  }
+}
+
+function pushIntoP(letter){
+  for (let i = 0; i < master.length; i++){
+      if(letter === master[i]){
+        pgArr.push(master[i])
+      }
+  }
+}
+
+function victory(){
+  if(pgArr.length === master.length){
+    message.innerHTML = 'You WIN!';
+    playing = false;
+  }
+  if(lives < 1){
+    playing = false;
+    message.innerHTML = 'You LOSE!';
+    showIt2();
+  }
+}
+
+function wordToHtml(word){
+  for (let i = 0; i < word.length; i++){
+    let newLetter = document.createElement('td');
+        newLetter.setAttribute('class', 'xtdx');
+        newLetter.innerHTML = word[i];
+        newLetter.style.color = '#d3d3d3';
+        parent.appendChild(newLetter);
+  }
+}
+
+const answerTds = parent.children;
+
+function showIt(letter) {
+    for (let i = 0; i < answerTds.length; i++) {
+      if(letter === answerTds[i].innerHTML){
+    answerTds[i].style.color = 'black';
+  }
+  }
+}
+
+function showIt2() {
+  for (let i = 0; i < answerTds.length; i++) {
+    answerTds[i].style.color = 'red';
+}
+}
+
+function playerInput(letter) {
+  if(playing === true){
+    showIt(letter);
+    blankOut(letter);
+    pushIntoP(letter);
+    calcLives(letter);
+    livesMessage.innerHTML = `${lives} lives remaining`
+    victory();
+    }
+}
+
+
+/* master.indexOf(id) > -1)*/
+function blankOut(letter) {
+  if(letter === 'q'){
+  q.style.display = 'none';
+}else if(letter === 'w'){
+  w.style.display = 'none';
+}else if(letter === 'e'){
+  e.style.display = 'none';
+}else if(letter === 'r'){
+  r.style.display = 'none';
+}else if(letter === 't'){
+  t.style.display = 'none';
+}else if(letter === 'y'){
+  y.style.display = 'none';
+}else if(letter === 'u'){
+  u.style.display = 'none';
+}else if(letter === 'i'){
+  i.style.display = 'none';
+}else if(letter === 'o'){
+  o.style.display = 'none';
+}else if(letter === 'p'){
+  p.style.display = 'none';
+}else if(letter === 'a'){
+  a.style.display = 'none';
+}else if(letter === 's'){
+  s.style.display = 'none';
+}else if(letter === 'd'){
+  d.style.display = 'none';
+}else if(letter === 'f'){
+  f.style.display = 'none';
+}else if(letter === 'g'){
+  g.style.display = 'none';
+}else if(letter === 'h'){
+  h.style.display = 'none';
+}else if(letter === 'j'){
+  j.style.display = 'none';
+}else if(letter === 'k'){
+  k.style.display = 'none';
+}else if(letter === 'l'){
+  l.style.display = 'none';
+}else if(letter === 'z'){
+  z.style.display = 'none';
+}else if(letter === 'x'){
+  x.style.display = 'none';
+}else if(letter === 'c'){
+  c.style.display = 'none';
+}else if(letter === 'v'){
+  v.style.display = 'none';
+}else if(letter === 'b'){
+  b.style.display = 'none';
+}else if(letter === 'n'){
+  n.style.display = 'none';
+}else if(letter === 'm'){
+  m.style.display = 'none';
+}
+}
+
+
+const playGame = () => {
+  lives = 5;
+  livesMessage.innerHTML = `${lives} lives remaining`;
+  message.innerHTML = '';
+  playing = true;
+  master = [];
+  pgArr = [];
+  random = Math.floor(Math.random() * wordArr.length);
+  randomWord = wordArr[random];
+  turnIntoArr(randomWord);
+  wordToHtml(randomWord);
+  q.style.display = 'inline';
+  w.style.display = 'inline';
+  e.style.display = 'inline';
+  r.style.display = 'inline';
+  t.style.display = 'inline';
+  y.style.display = 'inline';
+  u.style.display = 'inline';
+  i.style.display = 'inline';
+  o.style.display = 'inline';
+  p.style.display = 'inline';
+  a.style.display = 'inline';
+  s.style.display = 'inline';
+  d.style.display = 'inline';
+  f.style.display = 'inline';
+  g.style.display = 'inline';
+  h.style.display = 'inline';
+  j.style.display = 'inline';
+  k.style.display = 'inline';
+  l.style.display = 'inline';
+  z.style.display = 'inline';
+  x.style.display = 'inline';
+  c.style.display = 'inline';
+  v.style.display = 'inline';
+  b.style.display = 'inline';
+  n.style.display = 'inline';
+  m.style.display = 'inline';
+}
+
+playGame();
+
+playButton.onclick = () => {
+    while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+}
+playGame();
+}
+
+// end of Hangman
 
 

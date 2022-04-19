@@ -83,7 +83,7 @@ nav {
 }
 
 #skills-container {
-  max-width: 650px;
+  max-width: 800px;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -389,3 +389,31 @@ a {
 #rps-result,#rps-result2 {
   height: 25px;
 }
+
+
+/*hangman*/
+
+.word {
+  font-size: 20px;
+  text-transform: uppercase;
+  height: 50px;
+  margin-bottom: 50px;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 15px;
+    background-color: #d3d3d3;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .letter-table {
+    cursor: pointer;
+    color: black;
+  }
+  
+  .letter-table:active {
+    opacity: 0.5;
+   }
+  
